@@ -51,9 +51,36 @@ article {
   border-radius: 10px;
 }
 
-article img {
-  width: 600px;
+article h2 {
+  color: #261261;
+  font-size: 30px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+article figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+article figure figcaption {
+  font-size: 10px;
+  color: #261261;
+  text-align: center;
+  margin-top: 5px;
+}
+
+article figure img {
+  width: 300px;
   border-radius: 10px;
+}
+
+article caption {
+  font-size: 1px;
 }
 
 aside {
