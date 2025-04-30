@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #eaeaea;
+}
+
+header {
+  background-color: #261261;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+  font-weight: bolder;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+article {
+  flex: 2;
+  background-color: white;
+  border: grey solid 1px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+article img {
+  width: 600px;
+  border-radius: 10px;
+}
+
+aside {
+  flex: 1;
+  margin: 10px;
+  border: #261261 solid 1px;
+  background-color: #e9e4f7;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin: 10px 0;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #261261;
+}
+
+footer {
+  background-color: #261261;
+  color: white;
+  text-align: center;
+  padding: 27px;
+  margin-top: 20px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+  color: #d6cdf0;
+}
+
+aside ul li a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
