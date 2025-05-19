@@ -14,6 +14,17 @@ header {
     text-align: center;   
 }
 
+header h1 {
+    margin: 3px;
+    font-size: 30px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+}
+
 .nav nav {
     display: flex;
     background-color: rgb(33, 32, 32);
