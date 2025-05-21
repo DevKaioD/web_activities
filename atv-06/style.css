@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e5d7c4;
+  color: #333;
+}
+
+header {
+  background-color: #4c6444;
+  color: #caba9c;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+}
+
+header img {
+  width: 50px;
+  border: solid 2px #caba9c;
+  border-radius: 100px;
+  padding: 5px;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: #102820;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul button {
+  background: none;
+  color: #102820;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul button:hover {
+  background-color: #1f4b3c;
+  color: #102820;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #8a6240;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #caba9c;
+  background-color: #1f4b3c;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+main .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+  width: 80%;
+  background-color: #fcf5ec;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #102820;
+}
+
+main .services {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 80%;
+  background-color: #fcf5ec; /* fundo claro */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #102820;
+}
+
+main .services ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+main .services ul li {
+  background-color: #102820;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  color: #caba9c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+main .services ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+main .services ul li img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+main .services ul li p {
+  margin: 0;
+  font-size: 16px;
+}
+
+main .about {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 80%;
+  background-color: #fcf5ec;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+
+footer {
+  background-color: #102820;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: sans-serif;
+  color: #caba9c;
+}
+
+footer section {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+footer h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #8a6240;
+}
+
+footer a:hover {
+  color: #e5d7c4;
+}
+
+footer small {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  color: #777;
+}
+
+/* Dark Mode Styles */
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode header {
+  background-color: #2f3e2e;
+  color: #e0cba3;
+}
+
+body.dark-mode nav {
+  background-color: #1a2a1f;
+}
+
+body.dark-mode nav ul li a {
+  color: #d9b58c;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #fffbe9;
+}
+
+body.dark-mode main .hero,
+body.dark-mode main .services,
+body.dark-mode main .about {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+body.dark-mode .card {
+  background-color: #3a3a3a;
+  color: #e5d7c4;
+}
+
+body.dark-mode footer {
+  background-color: #1a2a1f;
+  color: #f5f5f5;
+}
+
+body.dark-mode footer a {
+  color: #d9b58c;
+}
+
+body.dark-mode footer a:hover {
+  color: #fffbe9;
+}
