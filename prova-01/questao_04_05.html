@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="https://www.svgrepo.com/show/508282/bell.svg" type="image/x-icon">
+  <title>Q4 - Card de Notificação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content p {
+      margin-bottom: 20px;
+    }
+
+    .notification-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 250px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+      transition: all .3s ease;
+      cursor: pointer;
+    }
+
+    .notification-card:active {
+      transform: scale(.9);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .close-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+
+    .close-btn:hover {
+      background-color: red;
+      color: white;
+    }
+
+    .card-content {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h2>Conteúdo da Página</h2>
+    <!-- Lorem para forçar rolagem -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quia harum a delectus repellat eaque porro explicabo laborum, assumenda architecto. Sit libero incidunt nobis earum blanditiis labore perspiciatis sequi explicabo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, officia non sequi hic blanditiis iure nobis quidem ab magnam voluptate, veritatis, unde id molestiae. Quisquam consectetur tempora saepe repellat iusto!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorem nam minima assumenda distinctio natus laborum in magni reiciendis vitae iste aperiam iusto, velit quod itaque non repellendus molestias quis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, aliquid quo voluptatem vel mollitia saepe harum omnis iusto illo consequuntur beatae ullam dolorem voluptate obcaecati neque, doloribus minus iure laboriosam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quibusdam quaerat voluptatum odio earum ratione, natus animi, quam autem unde omnis tempora laborum aliquam. Dolore ad omnis doloribus laudantium possimus.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quidem fugit eius a cupiditate quia accusamus ea modi iure laborum, provident delectus omnis esse! Sint debitis accusantium ad labore maiores.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, incidunt! Maiores quasi cupiditate voluptates? Impedit nostrum, magnam voluptatem suscipit veniam, inventore nam ullam enim dignissimos fugit, autem qui. Ducimus, doloribus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At cupiditate voluptates enim vitae? Minima molestiae hic sunt praesentium aspernatur ullam sequi qui, repellat, obcaecati, illum dignissimos architecto reiciendis reprehenderit adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sit mollitia dolorum dolore voluptatum repellat labore. Alias tenetur consequatur dolorem laudantium! Voluptates nam magni, veritatis dicta inventore deleniti autem doloremque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit molestias numquam cumque optio laudantium eveniet repellat dignissimos est perspiciatis! Quam quos ad dolore facilis fuga, porro delectus possimus nulla.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In optio voluptas illo ipsum, nam assumenda atque, magni molestiae nesciunt repudiandae id iusto tenetur earum consectetur laborum? Odio, nisi reiciendis? Esse.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit delectus et eligendi omnis, iusto ut rem accusamus itaque a quam quaerat rerum! Nobis enim ut quas. Nobis perspiciatis ducimus mollitia.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos incidunt voluptatem, vel nihil temporibus dignissimos illo repellendus praesentium voluptatum, laborum animi fuga. Quibusdam et nam alias eos libero ut!</p>
+  </div>
+
+  <div class="notification-card" id="card">
+    <div class="card-header">
+      <button class="close-btn" onclick="fecharCard()">X</button>
+    </div>
+    <div class="card-content">
+      <h3>Novidade!</h3>
+      <p>Confira nossos novos produtos.</p>
+    </div>
+  </div>
+
+  <script>
+    function fecharCard() {
+      document.getElementById("card").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
