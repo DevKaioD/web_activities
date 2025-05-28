@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/queen.png" type="image/x-icon">
+    <title>Q1 - DevQueens</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      header {
+        background-color: #7d53ff;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header img {
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .lateralNav {
+        background-color: #76f6f5;
+        padding: 10px;
+        width: 30%;
+        box-sizing: border-box;
+      }
+
+      .lateralNav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .lateralNav ul li {
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .lateralNav ul li:hover {
+        background-color: #61c8c8;
+      }
+
+      .lateralNav li a {
+        text-decoration: none;
+        color: #080808;
+        display: block;
+      }
+
+      main {
+        background-color: #f6f4fb;
+        padding: 1rem;
+        width: 70%;
+        box-sizing: border-box;
+      }
+
+      section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+      }
+
+      section ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      section ul li {
+        background-color: #7d53ff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        color: #080808;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      section ul li:hover {
+        transform: translateY(-5px);
+        background-color: #8964f8;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .img-placeholder {
+        width: 100%;
+        height: 200px;
+        background-color: #bdc3c7;
+        margin: 1rem 0;
+        border-radius: 8px;
+      }
+
+      footer {
+        background-color: #080808;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      @media (max-width: 400px) {
+        .container {
+          flex-direction: column;
+        }
+
+        nav.lateralNav,
+        main {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <img src="./images/queen2.png" alt="">
+      <h1>DevQueens</h1>
+    </header>
+
+    <div class="container">
+      <nav class="lateralNav">
+        <ul>
+          <li><a href="#general">Geral</a></li>
+          <li><a href="#about-us">Quem somos?</a></li>
+          <li><a href="#projects">Nossos Projetos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section id="general">
+          <h2>Geral</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            corrupti nam quod totam accusamus, alias reiciendis eum tenetur
+            natus itaque obcaecati ipsum nihil cum mollitia aspernatur
+            consequuntur vero earum iste.
+          </p>
+          <div class="img-placeholder"></div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque vero
+            maiores consectetur, soluta ipsum corrupti numquam eveniet eos ab
+            neque ex aliquam nesciunt incidunt necessitatibus labore culpa nisi.
+            Hic, maiores!
+          </p>
+        </section>
+
+        <section id="about-us">
+          <h2>Quem Somos</h2>
+          <p>
+            Somos um grupo de desenvolvedoras apaixonadas por tecnologia e
+            inovação. Nossa missão é empoderar mulheres na área de
+            desenvolvimento e promover a diversidade no setor.
+          </p>
+          <div class="img-placeholder"></div>
+        </section>
+
+        <section id="projects">
+          <h2>Projetos</h2>
+          <ul>
+            <li class="card">
+              <p>Plataforma de aprendizado online</p>
+            </li>
+            <li class="card">
+              <p>App de gerenciamento de tarefas</p>
+            </li>
+            <li class="card">
+              <p>Rede de apoio a novas desenvolvedoras</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="faq">
+          <h2>FAQ</h2>
+          <p>
+            Confira nossas dúvidas frequentes e saiba como podemos te ajudar!
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>kaiodavidson@ufc.br</p>
+      <p>2025.1 — Todos os direitos reservados</p>
+    </footer>
+  </body>
+</html>
