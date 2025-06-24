@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Aluno</title>
+</head>
+<body>
+    <a href="./view.html">Visualizar Alunos</a>
+
+    <form action="#" id="form-aluno">
+        <h1>Editar Aluno</h1>
+
+        <input type="hidden" id="id" name="id">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso" required>
+
+        <label for="ira">IRA:</label>
+        <input type="number" id="ira" name="ira" step="0.01" required>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <script src="./assets/edit.js"></script>
+</body>
+</html>
