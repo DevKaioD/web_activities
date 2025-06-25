@@ -25,8 +25,8 @@ async function carregarAlunos() {
             tbody.appendChild(tr);
         });
 
-        const mediaIra = alunos.length > 0 ? (iraTotal / alunos.length).toFixed(2) : 0;
-        document.querySelector('.media').textContent = `Média do IRA: ${mediaIra}`;
+        const mediaIra = alunos.length > 0 ? (iraTotal / alunos.length).toFixed(2) : "0.00";
+        document.querySelector('#media').textContent = `Média do IRA: ${mediaIra}`;
 
     } catch (error) {
         console.error('Erro ao carregar alunos:', error);
@@ -51,7 +51,7 @@ async function excluirAluno(id) {
             window.location.href = 'view.html'; // Redireciona para a lista de alunos
             carregarAlunos(); // Recarrega a lista de alunos
         } else {
-            alert('Erro ao excluir aluno.');
+            alert(data.erro || 'Erro ao excluir aluno.');
         }
     } catch (error) {
         console.error('Erro ao excluir aluno:', error);

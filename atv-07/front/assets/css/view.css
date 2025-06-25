@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #edf0f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #201932;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 6px rgba(32, 25, 80, 0.4);
+  min-width: 100px;
+  text-align: center;
+}
+
+a:hover,
+a:focus {
+  background-color: #6B4EE6;
+  box-shadow: 0 4px 12px rgba(99, 99, 130, 0.6);
+  outline: none;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #222;
+  font-size: 2.2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+thead tr {
+  background-color: #201932;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+th, td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #ece8fc;
+  transition: background-color 0.25s ease;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: 600;
+  background-color:#201932;
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 6px rgba(32, 25, 80, 0.4);
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+}
+
+button:hover,
+button:focus {
+  background-color: #EA37A3;
+  box-shadow: 0 4px 12px rgba(234,55,162,0.6);
+  outline: none;
+}
+
+td button {
+  width: auto;
+}
+
+#media {
+  font-size: 1.4em;
+  letter-spacing: 5px;
+  color: #2BBEF2;
+  margin-top: 20px;
+  user-select: none;
+}
