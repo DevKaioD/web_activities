@@ -1,4 +1,5 @@
 const form = document.getElementById('form-aluno');
+const mensagem = document.getElementById('mensagem');
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -7,8 +8,13 @@ form.addEventListener('submit', async (event) => {
     const curso = document.getElementById('curso').value;
     const ira = parseFloat(document.getElementById('ira').value);
 
+    if (!nome || !curso || isNaN(ira)) {
+        mensagem.textContent = 'Por favor, preencha todos os campos corretamente.';
+        return;
+    }
+
     try {
-        const response = await fetch('http://localhost:3000/alunos/create', {
+        const response = await fetch('http://localhost:3000/alunos/criar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -16,14 +22,20 @@ form.addEventListener('submit', async (event) => {
             body: JSON.stringify({ nome, curso, ira })
         });
 
+        const data = await response.json();
+
         if (response.ok) {
-            alert('Aluno cadastrado com sucesso!');
-            window.location.href = 'view.html'; // Redireciona para a lista de alunos
+            const confirmed = confirm(data.mensagem + ' Deseja voltar a visualização?');
+            if (confirmed) {
+                window.location.href = 'view.html';
+            }
+            form.reset();
         } else {
-            alert('Erro ao cadastrar aluno.');
+            mensagem.textContent = 'Erro ao cadastrar aluno: ' + data.mensagem;
+            console.error('Erro:', data);
         }
     } catch (error) {
         console.error('Erro ao cadastrar aluno:', error);
-        alert('Erro ao cadastrar aluno.');
+        mensagem.textContent = 'Erro ao cadastrar aluno. Por favor, tente novamente mais tarde.';
     }
 });

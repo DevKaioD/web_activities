@@ -23,8 +23,13 @@ document.getElementById('form-editar').addEventListener('submit', async (event) 
     const curso = document.getElementById('curso').value;
     const ira = parseFloat(document.getElementById('ira').value);
 
+    if (!nome || !curso || isNaN(ira)) {
+        mensagem.textContent = 'Por favor, preencha todos os campos corretamente.';
+        return;
+    }
+
     try {
-        const response = await fetch(`http://localhost:3000/alunos/update/${id}`, {
+        const response = await fetch(`http://localhost:3000/alunos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -34,12 +39,12 @@ document.getElementById('form-editar').addEventListener('submit', async (event) 
 
         if (response.ok) {
             alert('Aluno atualizado com sucesso!');
-            window.location.href = 'view.html'; // Redireciona para a lista de alunos
+            window.location.href = 'view.html';
         } else {
-            alert('Erro ao atualizar aluno.');
+            document.getElementById('mensagem').textContent = 'Erro ao atualizar aluno.';
         }
     } catch (error) {
         console.error('Erro ao atualizar aluno:', error);
-        alert('Erro ao atualizar aluno.');
+        document.getElementById('mensagem').textContent = 'Erro ao atualizar aluno.';
     }
 });

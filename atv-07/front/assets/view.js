@@ -1,12 +1,16 @@
 async function carregarAlunos() {
     try {
-        const response = await fetch('http://localhost:3000/alunos/list');
+        const response = await fetch('http://localhost:3000/alunos/listar');
         const alunos = await response.json();
 
         const tbody = document.querySelector('#tabela-alunos tbody');
         tbody.innerHTML = ''; // Limpa o conteúdo atual da tabela
 
-        alunos.forEacgh(aluno => {
+        let iraTotal = 0;
+
+        alunos.forEach(aluno => {
+            iraTotal += parseFloat(aluno.ira);
+            
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${aluno.id}</td>
@@ -17,40 +21,35 @@ async function carregarAlunos() {
                 <td>
                     <button class="btn btn-danger" onclick="excluirAluno(${aluno.id})">Excluir</button>
                 </td>
-            `
+            `;
             tbody.appendChild(tr);
         });
+
+        const mediaIra = alunos.length > 0 ? (iraTotal / alunos.length).toFixed(2) : 0;
+        document.querySelector('.media').textContent = `Média do IRA: ${mediaIra}`;
+
     } catch (error) {
         console.error('Erro ao carregar alunos:', error);
     }
 }
 
-async function carregarMedia() {
-    try {
-        const response = await fetch('http://localhost:3000/alunos/media');
-        const media = await response.json();
-
-        document.getElementById('media').textContent = media.media.toFixed(2);
-    } catch (error) {
-        console.error('Erro ao carregar média:', error);
-    }
-}
-
-async function excluirAluno() {
+async function excluirAluno(id) {
     const confirmed = confirm('Tem certeza que deseja excluir este aluno?');
     if (!confirmed) {
         return;
     }
 
     try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const response = await fetch(`http://localhost:3000/alunos/delete/${id}`, {
+        const response = await fetch(`http://localhost:3000/alunos/${id}`, {
             method: 'DELETE'
         });
+
+        const data = await response.json();
 
         if (response.ok) {
             alert('Aluno excluído com sucesso!');
             window.location.href = 'view.html'; // Redireciona para a lista de alunos
+            carregarAlunos(); // Recarrega a lista de alunos
         } else {
             alert('Erro ao excluir aluno.');
         }
@@ -60,6 +59,4 @@ async function excluirAluno() {
     }
 }
 
-
 carregarAlunos();
-carregarMedia();
