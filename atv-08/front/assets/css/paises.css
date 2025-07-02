@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.brasil {
+  background-color: #fff3cd;
+  font-weight: bold;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+tr {
+  transition: background-color 0.3s;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.brasil:hover {
+  background-color: #ffeeba;
+}
+
+.estados {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.estados a {
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.estados a:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+tr {
+    transition: background-color 0.3s ease;
+}
+
+.acima-media {
+  background-color: #ffe5e5;
+  transition: background-color 0.3s ease;
+}
+
+.maior-relacao {
+  background-color: #d4edda;
+  transition: background-color 0.3s ease;
+}
+
+.menor-relacao {
+  background-color: #d1ecf1;
+  transition: background-color 0.3s ease;
+}
+
+tfoot td {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.acima-media:hover {
+  background-color: #fed5d5;
+}
+
+.maior-relacao:hover {
+  background-color: #c9e6cf;
+}
+
+.menor-relacao:hover {
+  background-color: #c8e6eb;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.paises {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.paises a {
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.paises a:hover {
+  background-color: #0056b3;
+}
